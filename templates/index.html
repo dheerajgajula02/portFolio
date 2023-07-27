@@ -6,7 +6,9 @@
 	<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dheeraj Gajula - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
 	</head>
   
 
@@ -15,10 +17,10 @@
         <div class="container">
             <h1>Dheeraj Gajula</h1>
             <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul style="padding: 10px; ">
+                    <a href="linkedin.com"><i class="fa fa-linkedin" style="color: aliceblue;"></i></a>
+                    <a href="github.com"><i class="fa fa-github" style="margin-left: 10px;"></i></a>
+                    <a href="dheerajgajula2202@gmail.com"><i class="fa fa-envelope" style="margin-left: 10px;"></i></a>
                 </ul>
             </nav>
         </div>
@@ -30,7 +32,7 @@
             <p>
               
               <br>machine learning and backend developer <br>
-              <br> I do studpid stuff to my phone and laptop <br>
+              <br> I do stupid stuff to my phone and laptop <br>
               <br> computer science student at Dayanada sagar college of engineering, Bangalore <br>
               <br>this is for testing <br>
 
@@ -38,13 +40,22 @@
                 
             </p>
         </div>
+
+
+        
     </section>
 
 
-    <object data="{{ url_for('static', filename='asserts/resume.pdf')}}" type="application/pdf"
-      style="min-height: 400px; width: 400px;"></object>
+    <center>
+      <object data="{{ url_for('static', filename='asserts/resume.pdf')}}" type="application/pdf" class="section"
+      style="height: 1150px; width: 800px; text-align: justify; align-content:center; display: flex;"></object>
 
-    <section id="portfolio" class="section">
+    </center>
+
+
+    
+
+    <!-- <section id="portfolio" class="section">
         <div class="container">
             <h2>Resume</h2>
 
@@ -100,25 +111,65 @@
 
 
         </div>
-    </section>
+    </section> -->
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>
-                Feel free to reach out to me at:
-                <br>
-                Email: your.email@example.com
-                <br>
-                Phone: (123) 456-7890
-            </p>
-        </div>
-    </section>
+
+
 
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Your Name. All rights reserved.</p>
-        </div>
+
+      <!-- <span style="margin-left: 20px; padding: 0px;">
+      <h3 style="margin-left: 50px ;">reach out to me </h3>
+    </span>
+    <span style="margin-left: 20px; padding: 0px;">
+      <a href="dheerajgajula2202@gmail.com" style="color: chartreuse;">dheerajgajula2202@gmail.com</a>
+    </span>
+      <br> -->
+
+      <div>
+        <span>
+          reach out , My email : <a style="color:chartreuse;" href="dheerajgajula2202@gmail.com">dheerajgajula2202@gmail.com</a>
+        </span>
+      </div>
+
+      <br>
+      
+
+      
+
+
+      <form action="/submit" method="post" style="margin-left: 50px;">
+
+        <span>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+      </span>
+
+      <span>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" size="40">
+      </span>
+
+      <br>
+      <br>
+
+
+      <div>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="40" rows="2"></textarea>
+
+        <span>
+          <button type="submit" style="width: 50px;" >Submit</button>
+    
+        </span>
+      </div>
+      
+     
+
+
+      </form>
+
+        
     </footer>
 </body>
 </html>
